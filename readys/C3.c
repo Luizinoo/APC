@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(){
-    int linhas, numero, resposta;
+    int linhas, numero, resposta = 0;
 
     system("cls");
 
@@ -9,10 +9,8 @@ int main(){
 
     for (int i = 1; i <= linhas; i++){
         scanf("%d", &numero);
-        if (numero > resposta || i == 1){
-            resposta = numero;
+        resposta = numero + resposta;
         }
-    }z
 
     printf("%d", resposta);
 
