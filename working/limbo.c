@@ -1,18 +1,17 @@
 #include <stdio.h>
 
 int main(){
-    int linhas, numero, resposta = 0;
+    int numero;
 
-    system("cls");
+    scanf("%d", &numero);
 
-    do{
-        scanf("%d", &numero);
-        if (0==numero%2){
-            resposta = numero + resposta;
-        }
-    } while (numero != 0);
-
-    printf("%d", resposta);
+    for (int linhas = 1; linhas <= numero; linhas++){
+        for (int colunas = 1; colunas <= linhas; colunas++){
+            printf("%d ", colunas);
+        } 
+        printf("\n");
+    }
+    
 
     return 0;
 }
