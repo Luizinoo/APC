@@ -1,19 +1,20 @@
-#include <stdio.h>
+#include<stdio.h>
 
 int main(){
-    int linhas, colunas;
+    int linhas, numero, resposta;
 
     system("cls");
 
-    scanf("%d %d", &linhas, &colunas);
+    scanf("%d", &linhas);
 
-    for (int i = 0; i < linhas; i++){
-        for (int j = 0; j < colunas; j++){
-            printf("[%03d,", i);
-            printf("%03d] ", j);
+    for (int i = 1; i <= linhas; i++){
+        scanf("%d", &numero);
+        if (numero > resposta || i == 1){
+            resposta = numero;
         }
-        printf("\n");
     }
+
+    printf("%d", resposta);
 
     return 0;
 }

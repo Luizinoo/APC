@@ -12,7 +12,7 @@ int main(){
         if (numero > resposta || i == 1){
             resposta = numero;
         }
-    }z
+    }
 
     printf("%d", resposta);
 
