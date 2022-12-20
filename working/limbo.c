@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdbool.h>
+#include<math.h>
 
 int main(){
     int linhas, numero;
@@ -9,7 +10,22 @@ int main(){
 
     scanf("%d", &linhas);
 
-    for (int i = 1; i <= linhas; i++){
+    ehprimo=
+
+    while(numero!=0){
+        numero=numero/10;
+        printf("%d\n", numero);
+        break;
+    }
+
+    return 0;
+}
+
+int primo (candidato){
+
+    int numero;
+
+    for(int i = 1; i <= linhas; i++){
         scanf("%d", &numero);
         for(int j = 2; j<numero; j++ ){
             ehprimo=true;
@@ -18,13 +34,5 @@ int main(){
                 break;
             }
         }
-        if (ehprimo){
-            printf("e primo\n");
-        }
-        else{
-            printf("nao e primo\n");
-        }
     }
-
-    return 0;
 }
