@@ -2,43 +2,19 @@
 #include<stdbool.h>
 #include<math.h>
 
-bool checaprimo (numero){
-    
-    bool ehprimo;
-
-    for(int j = 2; j<numero; j++ ){
-        ehprimo=true;
-            if (0 == numero%j){
-                ehprimo = false;
-            break;
-        }
-    }return ehprimo;
-}
-
-bool checaarrojado (numero){
-
-    while(numero!=0){
-        if (checaprimo(numero)){
-            numero = numero/10;
-        }else{
-            return false;
-        }
-    }return true;
-}
 
 int main(){
 
-    int linhas, numero;
+    int restaurantes, resultados;
 
-    scanf("%d", &linhas);
-    for(int i = 1; i <= linhas; i++){
-        scanf("%d", &numero);
-        if (checaarrojado(numero)){
-            printf("arrojado\n");
-        }else{
-            printf("nao arrojado\n");
+    for(int i = 1; i <= 3; i++){
+        scanf("%d", &restaurantes); 
+        for ( i = 1; i < restaurantes; i++){
+            scanf("%d", &resultados);
         }
     }
+
+    printf("%d", resultados);
 
     return 0;
 }

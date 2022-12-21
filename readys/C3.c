@@ -10,7 +10,7 @@ int main(){
     for (int i = 1; i <= linhas; i++){
         scanf("%d", &numero);
         resposta = numero + resposta;
-        }
+    }
 
     printf("%d", resposta);
 
