@@ -27,10 +27,10 @@ bool checaarrojado (numero){
 }
 
 int main(){
+
     int linhas, numero;
 
     scanf("%d", &linhas);
-
     for(int i = 1; i <= linhas; i++){
         scanf("%d", &numero);
         if (checaarrojado(numero)){
