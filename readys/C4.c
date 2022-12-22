@@ -2,7 +2,7 @@
 
 int main(){
 
-    int linhas, diferente, diferenciante = 0;
+    int linhas;
 
     scanf("%d", &linhas);
 
@@ -12,17 +12,18 @@ int main(){
         scanf("%d", &num[contador]);
     }
 
-    scanf("%d", & diferente);
-
     for (int contador = 0; contador < linhas; contador++){
-        if (num[contador] == diferente){
-            printf("pertence");
-            diferenciante++;
+        if (num[contador]%2 == 0){
+            printf("%d ", num[contador]);
         }
     }
 
-    if (diferenciante == 0){
-        printf("nao pertence");
+    printf("\n");
+
+    for (int contador = 0; contador < linhas; contador++){
+        if (num[contador]%2 != 0){
+            printf("%d ", num[contador]);
+        }
     }
 
     return 0;
