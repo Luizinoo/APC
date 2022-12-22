@@ -2,15 +2,15 @@
 #include<stdbool.h>
 #include<math.h>
 
-bool checaprimo (numero){
+bool checaprimo (int numero){
 
     bool ehprimo;
     
     if (numero == 1){
-        ehprimo = false;
+        return false;
     }
     if (numero == 2){
-        ehprimo = true;
+        return true;
     }
     for(int j = 2; j<= sqrt(numero); j++){
         if (numero%j == 0){
@@ -23,7 +23,7 @@ bool checaprimo (numero){
     return ehprimo;
 }
 
-bool checaarrojado (numero){
+bool checaarrojado (int numero){
 
     while(numero != 0){
         if (checaprimo(numero)){
