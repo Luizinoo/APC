@@ -2,31 +2,33 @@
 
 int main(){
 
-    int linhas, media = 0, verificador = 0;
+    int linhas, diferenciante = 0;
 
     scanf("%d", &linhas);
 
     int num[linhas];
+    int num2[linhas];
 
     for (int contador = 0; contador < linhas; contador++){
         scanf("%d", &num[contador]);
     }
     for (int contador = 0; contador < linhas; contador++){
-        media = media + num[contador];
+        scanf("%d", &num2[contador]);
     }
-
-    media=media/linhas;
 
     for (int contador = 0; contador < linhas; contador++){
-        if (num[contador] > media){
-            printf("%d ", num[contador]);
-            verificador ++;
-        }   
+        if (num[contador] == num2[contador]){
+            diferenciante++;
+        }
     }
 
-    if (verificador == 0){
-        printf("0");
+    if (diferenciante == linhas){
+        printf("sim");
     }
+    if (diferenciante != linhas){
+        printf("nao");
+    }
+    
 
     return 0;
 }

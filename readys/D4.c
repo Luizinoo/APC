@@ -2,7 +2,7 @@
 
 int main(){
 
-    int linhas, media = 0, verificador = 0;
+    int linhas;
 
     scanf("%d", &linhas);
 
@@ -11,21 +11,19 @@ int main(){
     for (int contador = 0; contador < linhas; contador++){
         scanf("%d", &num[contador]);
     }
-    for (int contador = 0; contador < linhas; contador++){
-        media = media + num[contador];
-    }
-
-    media=media/linhas;
 
     for (int contador = 0; contador < linhas; contador++){
-        if (num[contador] > media){
-            printf("%d ", num[contador]);
-            verificador ++;
-        }   
+        if (num[contador]%2 == 0){
+            printf("%d ", contador);
+        }
     }
 
-    if (verificador == 0){
-        printf("0");
+    printf("\n");
+
+    for (int contador = 0; contador < linhas; contador++){
+        if (num[contador]%2 != 0){
+            printf("%d ", contador);
+        }
     }
 
     return 0;
