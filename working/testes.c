@@ -2,31 +2,14 @@
 
 int main(){
 
-    int linhas, media = 0, verificador = 0;
+    char usuario[1000];
 
-    scanf("%d", &linhas);
+    scanf("%s", &usuario);
 
-    int num[linhas];
-
-    for (int contador = 0; contador < linhas; contador++){
-        scanf("%d", &num[contador]);
-    }
-    for (int contador = 0; contador < linhas; contador++){
-        media = media + num[contador];
-    }
-
-    media=media/linhas;
-
-    for (int contador = 0; contador < linhas; contador++){
-        if (num[contador] > media){
-            printf("%d ", num[contador]);
-            verificador ++;
-        }   
-    }
-
-    if (verificador == 0){
-        printf("0");
-    }
+    printf("%s", usuario);
+    printf(".");
+    printf("sobrenome");
+    printf("@unb.br");
 
     return 0;
 }

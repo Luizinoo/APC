@@ -12,7 +12,7 @@ bool checaprimo (int numero){
     if (numero == 2){
         return true;
     }
-    for(int j = 2; j<= sqrt(numero); j++){
+    for(int j = 3; j<= sqrt(numero); j+=2){
         if (numero%j == 0){
             ehprimo = false;
             break;
