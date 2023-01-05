@@ -14,7 +14,7 @@ int strcon(char conta[]){
 int main(){
 
     int linhas, caracteres, atual = 0;
-    char palavras[1000000];
+    char palavras[10000];
     
     scanf("%d", &linhas);
 

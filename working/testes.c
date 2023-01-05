@@ -1,22 +1,21 @@
 #include <stdio.h>
+#include <string.h>
 
 int main () {
 
-    char usuario[200], frase[200], palavra[200];
-    int j = 0;
+    char frase[1000], ch[1000];
+    int linhas, tam;
 
-    scanf("%s", &usuario);
-    scanf(" %[^\n]s", frase);
-    
-    for (int i = 0; frase[i] != '\0'; i++) {
-        palavra[j] = frase[i];
-        j = palavra[j] == ' ' && frase[i + 1] != ' ' && frase[i + 1] != '\0' ? 0 : j + 1;
+    scanf("%d", &linhas);
+
+    for (int i = 0; i <= linhas; i++){
+        fgets(frase, 1000, stdin);
+        tam = strlen(frase);
+        for(int j = 0; j < tam; j++){
+            ch[j]=(frase[j] + 'A' + 13) % 26 + 'A';
+        }
+        printf("%s", ch);
     }
-
-    palavra[j] = '\0';
-
-    printf("%s", usuario);
-    printf(".");
-    printf("%s", palavra);
-    printf("@unb.br");
+    
+    return 0;
 }
